@@ -63,7 +63,7 @@ print(maximum)
 
 for i in range ( 1, 11 , 3 ):
     print(i)
-    1 4 7 10 skips 3 form 1 till 11
+    # 1 4 7 10 skips 3 form 1 till 11
 
 
 for i in range(1, 101):
