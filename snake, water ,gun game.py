@@ -3,9 +3,12 @@ i=1
 users_points=0
 while i<=n:
   c = [0,1,2]
-  import random 
+  import random
   u= random.choice(c)
-  o=int(input(f"Enter your choice for round {i}\n 0 for Snake\n 1 for Water\n 2 for Gun\n  your choice is : " ))
+  o=int(input(f"Enter your choice for round {i}\n 0 for Snake\n 1 for Water\n 2 for Gun\n Your choice is : " ))
+  if o >=3 :
+     print("Invalid input")
+     break
   d="⚖️ This round was draw ⚖️"
   w="🎉 You won this round 🎉"
   l="😵 You loose this round 😵"
