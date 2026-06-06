@@ -58,3 +58,31 @@
 #         n += 1
 
 
+
+
+
+
+
+
+f = open('C:/Users/ASUS/Desktop/File_Handling.txt','w')
+f.write('Huzaifa Iqbal\n')
+f.write('Huzi\n')
+for i in range (10):
+            print(f.write(f"{i}\n"))
+f.close()
+
+
+f = open('C:/Users/ASUS/Desktop/File_Handling.txt','a')
+f.write('\nHail NIET\n')
+f.close()
+print("\n")
+f = open('C:/Users/ASUS/Desktop/File_Handling.txt','r')
+print(f.read())
+# print(f.read(7))
+
+# f = open ('File_Handling.txt','w')
+# f.write('Hail CS-B')
+# f.close()
+# f = open('File_Handling.txt', 'r')
+# print(f.read())
+# f.close()
