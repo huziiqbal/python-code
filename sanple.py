@@ -62,7 +62,7 @@
 
 
 
-
+# ////////// FILE HANDLING IN PYTHON ///////////
 
 f = open('C:/Users/ASUS/Desktop/File_Handling.txt','w')
 f.write('Huzaifa Iqbal\n')
@@ -86,3 +86,10 @@ print(f.read())
 # f = open('File_Handling.txt', 'r')
 # print(f.read())
 # f.close()
+
+try:
+  f = open ('File_Handlin','r')
+  print(f.read())
+except:
+  print("some error occured")
+
