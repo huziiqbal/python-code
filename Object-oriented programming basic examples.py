@@ -16,7 +16,7 @@ no2 = Car("toyota","fortuner",2022)
 no1.info()
 no2.info()
 
-# # NUMBER 2
+# NUMBER 2
 
 class Rectangle:
   def __init__(self,length, width):
@@ -32,7 +32,7 @@ second_figure = Rectangle(34,73)
 first_figure.area()
 second_figure.area()
 
-#IMPROVED NUMBER 2
+# IMPROVED NUMBER 2
 
 class Rectangle:
   def __init__(self,length, width):
@@ -105,3 +105,5 @@ class Students:
 
 Student_one=Students("HUZAIFA",87,93,98)
 Student_one.Average_Grade()
+
+

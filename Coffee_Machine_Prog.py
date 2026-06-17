@@ -67,3 +67,4 @@ while order != "OFF":
         for key, value in Resources.items():
             print(f"{key}: {value}")
 
+
