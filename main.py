@@ -1,25 +1,22 @@
-from menu import *
-from money_machine import *
-from coffee_maker import *
+from question_model import Question
+from data import question_data
+from quiz_brain import Quiz_Brain
 
-order = "ON"
-menu = Menu()
-coffee = CoffeeMaker()
-money = MoneyMachine()
-while order != "Off":
-    order = input(f"what would you like to order? {menu.get_items()}").lower()
-    if order == "off":
-        print("Machine OFF")
+questions = []
+answers = []
+for question in question_data:
+    ques = question["text"]
+    ans = question["answer"]
+    new_question = Question(ques, ans)
+    questions.append(new_question.text)
+    answers.append(new_question.answer)
+
+quiz = Quiz_Brain(questions, answers)
+while True:
+    result = quiz.question()
+    if result == "Incorrect":
+        print("Incorrect")
+        print(f"You answered {quiz.current_question - 1} questions correctly")
         break
-    drink = menu.find_drink(order)
-    if drink:
-        print(f"You ordered : {drink.name}")
-        print(f"It'll be: ${drink.cost}")
-        try :
-            if coffee.is_resource_sufficient(drink) == True:
-                if money.make_payment(drink.cost) == True:
-                    coffee.make_coffee(drink)
-
-        except:
-            print("Sorry, we don't have enough coffee.")
-
+    else:
+        print(result)
