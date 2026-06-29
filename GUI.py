@@ -165,12 +165,16 @@
 
 
 
+
+
 # CIRCLE
 # for i in range(365):
 #     huzi.forward(1)
 #     huzi.left(1)
     # or
 # huzi.circle(50)
+
+
 
 
 # from turtle import Turtle
@@ -180,6 +184,9 @@
 #     angle = choice([90, 180, 270, 360])
 #     huzi.forward(len)
 #     huzi.left(angle)
+
+
+
 
 
 # from turtle import Turtle
@@ -193,6 +200,8 @@
 # for i in range(100):
 #     huzi.circle(50)
 #     huzi.left(5)
+
+
 
 
 from turtle import Turtle,Screen
@@ -214,6 +223,12 @@ def up():
 def down():
     huzi.setheading(270)
     huzi.forward(50)
+def turn_right():
+    huzi.right(90)
+
+def turn_left():
+    huzi.left(90)
+
 
 screen.listen()
 screen.onkey(circle,"c")
@@ -221,5 +236,9 @@ screen.onkey(forward,"d")
 screen.onkey(backward,"a")
 screen.onkey(up,"w")
 screen.onkey(down,"s")
+screen.onkey(turn_right,"l")
+screen.onkey(turn_left,"k")
 
 screen.exitonclick()
+
+
