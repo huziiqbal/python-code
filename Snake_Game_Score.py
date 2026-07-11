@@ -5,8 +5,9 @@ class Score(Turtle):
         super().__init__()
         self.pen = Turtle()
         self.score = 0
+        self.scoreboard()
 
-    def score(self):
+    def scoreboard(self):
         self.pen.penup()
         self.pen.hideturtle()
         self.pen.goto(290, 260)

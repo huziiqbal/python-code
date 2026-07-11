@@ -27,7 +27,7 @@ while game:
     snake.move()
     if snake.snake[0].distance(food) < 15:
         food.collision()
-        score.score()
+        score.scoreboard()
 
 
 
