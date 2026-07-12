@@ -234,24 +234,9 @@ class Game:
             reverse=True
         )
 
-    def print_status(self):
-
-        print("-" * 40)
-
-        for p in self.players:
-
-            print(
-                f"{p.name:10}"
-                f" Money:{p.money:5}"
-                f" Position:{p.position:2}"
-                f" Properties:{len(p.properties)}"
-            )
-
-        print("-" * 40)
-
     def play(self):
 
-        while len(self.players )> 1 and self.round <= 100:
+        while len(self.players) > 1 and self.round <=100:
 
             self.take_turn()
 
@@ -261,8 +246,8 @@ class Game:
 
         print(self.leaderboard()[0].name)
 
-if __name__ == "__main":
 
+if __name__ == "__main__":
     game = Game()
 
     game.play()
