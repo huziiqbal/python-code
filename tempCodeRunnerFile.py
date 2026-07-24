@@ -1,4 +1,9 @@
-  # x_cor = snake.snake[0].xcor()
-        # y_cor = snake.snake[0].ycor()
-        # new_segment.penup()
-        # new_segment.goto(x_cor,y_cor)
+game_is_on = True
+while game_is_on:
+    screen.update()
+    paddle1.move()
+    paddle2.move()
+    if ball.direction == "left":
+        ball.move_left()
+    else:
+        ball.move_right()

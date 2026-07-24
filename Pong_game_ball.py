@@ -1,5 +1,4 @@
 from turtle import Turtle
-import random
 
 class Ball(Turtle):
     def __init__(self):
@@ -7,44 +6,51 @@ class Ball(Turtle):
         self.shape("circle")
         self.color("white")
         self.penup()
+        self.y_cor = 10
+        self.x_cor = 10
 
-    def one_cycle(self):
-        cyc = random.randint(1,2)
-        if cyc == 1 :
-            randomx = random.randint(0,350)
-            randomy = random.randint(0,250)
-            x = randomx + x
-            y = randomy + y
-            while ( x < 350 or y < 250):
-                    self.goto(x , y)
-                    self.goto(0 , -250)
-
-        if cyc == 2 :
-            randomx = random.randint(0,350)
-            randomy = random.randint(0,-250)
-            x = randomx + x
-            y = randomy - y
-            while ( x < 350 or y < 250):
-                    self.goto(x , y)
-                    self.goto(0 , -250)
+    def move(self):
+        new_x = self.xcor() + self.x_cor
+        new_y = self.ycor() + self.y_cor
+        self.goto(new_x, new_y)
+    def bounce(self):
+        self.y_cor *= -1
+    def reverse(self):
+        self.x_cor *= -1
 
 
 
 
 
+# class Ball(Turtle):
+#     def __init__(self):
+#         super().__init__()
+#         self.shape("circle")
+#         self.color("white")
+#         self.penup()
+#         self.goto(0 , -250)
+#         self.x = random.randint(0, 50)
+#         self.y = random.randint(-250, -200)
+#         self.goto(self.x, self.y)
+#         self.direction = "left"
+
+#     def move_left(self):
+#             self.goto(self.x, self.y)
+#             self.x -= 10
+#             self.y += 10
+#             if self.x > -350 and -250 < self.y < 250:
+#                 self.direction = "right"
+#                 self.x = 0
+#                 self.y = -250
 
 
-
-        # self.goto(0,-250)
-        # time.sleep(0.01)
-        # self.goto(350,random1)
-        # time.sleep(0.01)
-        # self.goto(0,-250)
-        # time.sleep(0.01)
-        # self.goto(-350,random2)
-        # time.sleep(0.01)
-        # self.goto(0,-250)
-        # time.sleep(0.01)
-
+#     def move_right(self):
+#             self.goto(self.x, self.y)
+#             self.x += 10
+#             self.y += 10
+#             if self.x < 350 and -250 <= self.y < 250:
+#                 self.direction = "left"
+#                 self.x = random.randint(0, 50)
+#                 self.y = random.randint(-250, -200)
 
 
