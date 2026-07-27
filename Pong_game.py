@@ -21,6 +21,7 @@ paddle1.goto(330,0)
 paddle2.goto(-330,0)
 
 
+
 screen.listen()
 screen.onkeypress(paddle1.go_up,"Up")
 screen.onkeypress(paddle1.go_down,"Down")
