@@ -19,6 +19,3 @@ class Ball(Turtle):
         self.x_cor *= -1
 
 
-
-
-

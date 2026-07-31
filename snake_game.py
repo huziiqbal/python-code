@@ -28,7 +28,7 @@ def inc_size():
         new_segment = Turtle()
         new_segment.color("white")
         new_segment.shape("square")
-        new_segment.penup()#line 
+        new_segment.penup()#line
         snake.snake.append(new_segment)
 game = True
 while game:
