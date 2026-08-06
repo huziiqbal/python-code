@@ -1,7 +1,1 @@
-    huzi = Turtle()
-            huzi.shape("square")
-            huzi.color("black")
-            huzi.penup()
-            huzi.goto(-300 - (y * 150), -180 + u * 80)
-            huzi.pendown()
-            turtles.append(huzi)
+"pale violet red","firebrick"
