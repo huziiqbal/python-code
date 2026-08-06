@@ -24,8 +24,7 @@ for i in Fur_color_list:
         black += 1
 
 
+
 print(f"Number of Grey: {grey}\n"
       f"Number of Cinnamon: {cinnamon}\n"
       f"Number of Black: {black}")
-
-
