@@ -1,12 +1,11 @@
 from turtle import Turtle , Screen
+import time
 turtle = Turtle()
 screen = Screen()
 image = "India_Map.gif"
 screen.addshape(image)
 turtle.shape(image)
 
-def get_mouse_click_coor(x,y):
-    print(x , y)
 
 states = [
     "Andhra Pradesh",
@@ -47,7 +46,7 @@ states_coordinates = [
     (-164.0, -147.0),
     (-227.0, 1.0),
     (-141.0, 137.0),
-    (-89.0, 159.0),
+    (-89.0, 189.0),
     (19.0, 27.0),
     (-154.0, -164.0),
     (-128.0, -228.0),
@@ -64,23 +63,37 @@ states_coordinates = [
     (-104.0, -231.0),
     (-94.0, -94.0),
     (161.0, 21.0),
-    (-92.0, 106.0),
-    (-89.0, 162.0),
+    (-72.0, 106.0),
+    (-69.0, 162.0),
     (71.0, 9.0)
 ]
 
 score = 0
+states_guessed = []
+not_guessed=[]
+def states_not_guessed():
+    for i in range(len(states)):
+        if states[i] not in states_guessed:
+            not_guessed.append(states[i])
+    print(f"States Not guessed: {not_guessed}")
+
 for i in range (30):
     ans_state = screen.textinput(title = f" {score}/28 Answered Correctlt\n Guess the state", prompt = "What's another state's name")
+    if (ans_state == "end"):
+        states_not_guessed()
+        break
     for u in range(len(states)):
-        if states[u] == ans_state :
+        if states[u].lower() == ans_state.lower() :
+            states_guessed.append(states[u])
             index = u
             pen = Turtle()
             pen.up()
-            pen.color("black")
+            pen.color("firebrick")
             pen.goto(states_coordinates[u])
-            pen.write(f"{states[u]}",font=("Arial", 8 , "bold"))
+            pen.write(f"{states[u]}",font=("Arial", 10, "bold"))
             score += 1
+
+
 
 
 
